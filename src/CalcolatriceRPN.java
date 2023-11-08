@@ -1,16 +1,16 @@
 import java.util.Stack;
 
 public class CalcolatriceRPN {
-    private String notazioneInfissa;
-    private String notazionePostfissa;
+    private String infissa;
+    private String postfissa;
     public CalcolatriceRPN() {}
 
-    public String getNotazioneInfissa() {
-        return notazioneInfissa;
+    public String getInfissa() {
+        return infissa;
     }
 
-    public String getNotazionePostfissa() {
-        return notazionePostfissa;
+    public String getPostfissa() {
+        return postfissa;
     }
 
     private boolean isNumber(char c) {
@@ -54,12 +54,12 @@ public class CalcolatriceRPN {
     }
 
     private void trasformaInPostfissa(String input) {
-        notazioneInfissa = input;
+        infissa = input;
         Stack<Character> operatori = new Stack<>();
         Stack<Character> risultato = new Stack<>();
 
-        for (int i = 0; i < notazioneInfissa.length(); i++) {
-            char c = notazioneInfissa.charAt(i);
+        for (int i = 0; i < infissa.length(); i++) {
+            char c = infissa.charAt(i);
             if (isNumber(c)) {
                 risultato.push(c);
             } else if (c == '(') {
@@ -81,15 +81,15 @@ public class CalcolatriceRPN {
             risultato.push(operatori.pop());
         }
 
-        notazionePostfissa = outputToString(risultato);
+        postfissa = outputToString(risultato);
     }
     public String calcola(boolean isPostfissa, String input) {
         if (!isPostfissa) {
             trasformaInPostfissa(input);
         }
         Stack<Double> risultato = new Stack<>();
-        for (int i = 0; i < notazionePostfissa.length(); i++) {
-            char c = notazionePostfissa.charAt(i);
+        for (int i = 0; i < postfissa.length(); i++) {
+            char c = postfissa.charAt(i);
             if (isNumber(c)) {
                 risultato.push(Double.parseDouble(String.valueOf(c)));
             } else if (isOperator(c)) {

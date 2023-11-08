@@ -1,18 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3947477-ce28-4d2b-9b04-767871d9e046" name="Changes" comment="" />
+    <list default="true" id="f3947477-ce28-4d2b-9b04-767871d9e046" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Calcolatrice.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calcolatrice.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Calcolatrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calcolatrice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CalcolatriceRPN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CalcolatriceRPN.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2WnOl2F0WKhDuyJwY6lKaeD8JYT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -24,6 +39,12 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/Utente/Desktop/SCUOLA/QUINTA/TPSIT/CalcolatriceRpn",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "onboarding.tips.debug.path": "C:/Users/nicol/OneDrive/Desktop/SCUOLA/QUINTA/TPSIT/CalcolatriceRPN/src/Main.java",
     "vue.rearranger.settings.migration": "true"
   }
@@ -37,8 +58,12 @@
       <option name="presentableId" value="Default" />
       <updated>1697365026829</updated>
       <workItem from="1697365027562" duration="7000" />
+      <workItem from="1699453857054" duration="3371000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
