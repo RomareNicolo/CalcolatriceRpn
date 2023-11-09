@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f3947477-ce28-4d2b-9b04-767871d9e046" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Calcolatrice.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calcolatrice.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Calcolatrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calcolatrice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CalcolatriceRPN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CalcolatriceRPN.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,6 +33,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
@@ -46,6 +47,9 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "onboarding.tips.debug.path": "C:/Users/nicol/OneDrive/Desktop/SCUOLA/QUINTA/TPSIT/CalcolatriceRPN/src/Main.java",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -58,7 +62,7 @@
       <option name="presentableId" value="Default" />
       <updated>1697365026829</updated>
       <workItem from="1697365027562" duration="7000" />
-      <workItem from="1699453857054" duration="3371000" />
+      <workItem from="1699453857054" duration="7182000" />
     </task>
     <servers />
   </component>
