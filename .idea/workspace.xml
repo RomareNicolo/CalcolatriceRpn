@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f3947477-ce28-4d2b-9b04-767871d9e046" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CalcolatriceRpn.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CalcolatriceRpn.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Calcolatrice.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calcolatrice.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Calcolatrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calcolatrice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CalcolatriceRPN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CalcolatriceRPN.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +44,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "Calcolatrce-Rpn-Database",
-    "last_opened_file_path": "C:/Users/Utente/Desktop/SCUOLA/QUINTA/TPSIT/CalcolatriceRpn",
+    "last_opened_file_path": "C:/xampp/htdocs/CalcolatriceRPN_Database",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",

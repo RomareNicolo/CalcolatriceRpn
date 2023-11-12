@@ -1,3 +1,5 @@
+package CalcolatriceRpnDatabase;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -27,17 +29,31 @@ public class Calcolatrice {
     private JCheckBox checkBox1;
     private JButton btnC;
     private JButton btnAc;
-    private JButton SPACEButton;
-    private CalcolatriceRPN calcolatrice;
+    private JPanel spaceContainer;
+    private JButton btnSpace;
+    private JButton btnCronologia;
+    private DB database;
+
     public Calcolatrice() {
+        JFrame frame = new JFrame("Calcolatrice");
+        frame.setContentPane(Panel);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setLocationRelativeTo(null);
+        frame.setMinimumSize(new Dimension(650, 500));
+        frame.setVisible(true);
+
         if(!checkBox1.isSelected()) {
-            SPACEButton.setVisible(false);
+            btnSpace.setVisible(false);
+            spaceContainer.setVisible(false);
         }
         checkBox1.addActionListener(e -> {
             if (!checkBox1.isSelected()) {
-                SPACEButton.setVisible(false);
+                btnSpace.setVisible(false);
+                spaceContainer.setVisible(false);
             } else if(checkBox1.isSelected()) {
-                SPACEButton.setVisible(true);
+                btnSpace.setVisible(true);
+                spaceContainer.setVisible(true);
             }
         });
         btnZero.addActionListener(e -> display.setText(display.getText() + "0"));
@@ -58,7 +74,7 @@ public class Calcolatrice {
         btnAperta.addActionListener(e -> display.setText(display.getText() + " ( "));
         btnChiusa.addActionListener(e -> display.setText(display.getText() + " ) "));
         btnAc.addActionListener(e -> display.setText(""));
-        SPACEButton.addActionListener(e -> display.setText(display.getText() + " "));
+        btnSpace.addActionListener(e -> display.setText(display.getText() + " "));
         btnC.addActionListener(e -> {
             String text = display.getText();
             if (!text.isEmpty()) {
@@ -69,26 +85,103 @@ public class Calcolatrice {
             if(display.getText().isEmpty()) {
                 return;
             }
+            String username = frame.getTitle();
+            String operation = display.getText();
+            String result;
             boolean isRPN = checkBox1.isSelected();
-            String text = display.getText();
             try {
-                display.setText(CalcolatriceRPN.calcola(isRPN, text));
+                result = CalcolatriceRPN.calcola(isRPN, operation);
+                display.setText(result);
             } catch (ArithmeticException a) {
-                display.setText(a.getMessage());
+                result = a.getMessage();
+            }
+            database = new DB();
+            if(database.insertOperation(username, operation, result) == 1) {
+                System.out.println("Inserimento riuscito");
+            } else {
+                System.out.println("Inserimento fallito");
             }
         });
     }
-    public static void main(String[] args) {
+
+    public Calcolatrice(String username) {
         JFrame frame = new JFrame("Calcolatrice");
-        frame.setContentPane(new Calcolatrice().Panel);
+        frame.setTitle(username);
+        frame.setContentPane(Panel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setLocationRelativeTo(null);
-        frame.setMinimumSize(new Dimension(450, 400));
+        frame.setMinimumSize(new Dimension(650, 500));
         frame.setVisible(true);
+
+        if(!checkBox1.isSelected()) {
+            btnSpace.setVisible(false);
+            spaceContainer.setVisible(false);
+        }
+        checkBox1.addActionListener(e -> {
+            if (!checkBox1.isSelected()) {
+                btnSpace.setVisible(false);
+                spaceContainer.setVisible(false);
+            } else if(checkBox1.isSelected()) {
+                btnSpace.setVisible(true);
+                spaceContainer.setVisible(true);
+            }
+        });
+        btnZero.addActionListener(e -> display.setText(display.getText() + "0"));
+        btnUno.addActionListener(e -> display.setText(display.getText() + "1"));
+        btnDue.addActionListener(e -> display.setText(display.getText() + "2"));
+        btnTre.addActionListener(e -> display.setText(display.getText() + "3"));
+        btnQuattro.addActionListener(e -> display.setText(display.getText() + "4"));
+        btnCinque.addActionListener(e -> display.setText(display.getText() + "5"));
+        btnSei.addActionListener(e -> display.setText(display.getText() + "6"));
+        btnSette.addActionListener(e -> display.setText(display.getText() + "7"));
+        btnOtto.addActionListener(e -> display.setText(display.getText() + "8"));
+        btnNove.addActionListener(e -> display.setText(display.getText() + "9"));
+        btnPunto.addActionListener(e -> display.setText(display.getText() + "."));
+        btnPiu.addActionListener(e -> display.setText(display.getText() + " + "));
+        btnMeno.addActionListener(e -> display.setText(display.getText() + " - "));
+        btnPer.addActionListener(e -> display.setText(display.getText() + " * "));
+        btnDiviso.addActionListener(e -> display.setText(display.getText() + " / "));
+        btnAperta.addActionListener(e -> display.setText(display.getText() + " ( "));
+        btnChiusa.addActionListener(e -> display.setText(display.getText() + " ) "));
+        btnAc.addActionListener(e -> display.setText(""));
+        btnSpace.addActionListener(e -> display.setText(display.getText() + " "));
+        btnC.addActionListener(e -> {
+            String text = display.getText();
+            if (!text.isEmpty()) {
+                display.setText(text.substring(0, text.length() - 1));
+            }
+        });
+        btnUguale.addActionListener(e -> {
+            if(display.getText().isEmpty()) {
+                return;
+            }
+            String operation = display.getText();
+            String result;
+            boolean isRPN = checkBox1.isSelected();
+            try {
+                result = CalcolatriceRPN.calcola(isRPN, operation);
+                display.setText(result);
+            } catch (ArithmeticException a) {
+                result = a.getMessage();
+                display.setText(result);
+            }
+            database = new DB();
+            if(database.insertOperation(username, operation, result) == 1) {
+                System.out.println("Inserimento riuscito");
+            } else {
+                System.out.println("Inserimento fallito");
+            }
+        });
+        btnCronologia.addActionListener(e -> {
+            database = new DB();
+            String cronologia = database.getOperations(username);
+            JTextArea textArea = new JTextArea(cronologia);
+            textArea.setEditable(false);
+            textArea.setText(cronologia);
+            JScrollPane scrollPane = new JScrollPane(textArea);
+            JOptionPane.showMessageDialog(null,scrollPane, "Cronologia", JOptionPane.INFORMATION_MESSAGE);
+        });
     }
 
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
-    }
 }
